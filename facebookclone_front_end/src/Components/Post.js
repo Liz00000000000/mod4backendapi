@@ -29,7 +29,7 @@ export class Post extends Component {
                 <div className='post-interaction-container'>
                     <div className='btns-container'> 
                     <button className='add-like'> <i className='fad fa-heart'/>Like</button>
-                    <button className='add-comment' onClick={this.handleClick} > Add Comment</button>
+                 <button className='add-comment' onClick={this.handleClick} > {this.state.inputVisible ? 'Submit Comment' : 'Add Comment'}</button>
                     </div>
                     <div className='likes-container'>
                         <span className='like-count'>{this.likesArray ? this.likes : null }</span>

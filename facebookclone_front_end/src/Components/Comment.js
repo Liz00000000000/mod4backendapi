@@ -22,7 +22,7 @@ export class Comment extends Component {
                   {this.user.first_name} {this.user.last_name}
                 </span>
                 <p>{this.props.content}</p>
-                <button className='add-reply' onClick={this.handleClick}>Reply</button>
+                <button className='add-reply' onClick={this.handleClick}>{this.state.inputVisible ? 'Submit Reply' : 'Add Reply'}</button>
                 {this.state.inputVisible ? <input onChange={this.handleOnChange} name='newReplyInput' placeholder='Comment...' value={this.state.newCommentInput}></input> : null }
                {this.theseReplies.map(rep => <Reply users={this.props.users} key={rep.id} {...rep} /> )}
             </div>
