@@ -5,14 +5,26 @@ export class Form extends Component {
         return (
             <div>
                 <form>
-                    <label>First name:</label><br>
+                    <label>First name:</label>
                     <input ></input>
-                    <label >Last name:</label><br>
+                    <label >Last name:</label>
                     <input ></input>
-                    <label for="fname">First name:</label><br>
+                    <label >Email Adress:</label>
                     <input ></input>
-                    <label for="lname">Last name:</label><br>
-                    <input type="text" id="fname" name="fname"></input>
+                    <label >Password:</label>
+                    <input ></input>
+                    <label >Password Confirmation:</label>
+                    <input ></input>
+                    <label >Bio:</label>
+                    <input ></input>
+                    <label >Profile Picture:</label>
+                    <input ></input>
+                    <label >City:</label>
+                    <input ></input>
+                    <label >Job:</label>
+                    <input ></input>
+                    <label >Age:</label>
+                    <input ></input>
                 </form>
             </div>
         )
