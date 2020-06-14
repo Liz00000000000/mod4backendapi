@@ -34,8 +34,6 @@ export class UsersHome extends Component {
     render() {
         let users = this.state.users.filter(user => user.first_name.toLowerCase().includes(this.state.search.toLowerCase()) || user.last_name.toLowerCase().includes(this.state.search.toLowerCase()))
         let posts = this.state.posts.filter(posts => posts.caption.toLowerCase().includes(this.state.search.toLowerCase()))
-        ///currently sorted from least amount of comments to most 
-        posts.sort((a,b) => a.comments > b.comments ? 1 : -1 )
         return (
             <div>
             <input onChange={this.handleOnSearch} value={this.state.search} placeholder='Searching...'></input>
