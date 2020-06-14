@@ -31,10 +31,6 @@ export class UsersHome extends Component {
         this.setState({ search: event.target.value })
     }
 
-    commentAdd = (event) =>{
-        console.log(event)
-    }
-
     render() {
         let users = this.state.users.filter(user => user.first_name.toLowerCase().includes(this.state.search.toLowerCase()) || user.last_name.toLowerCase().includes(this.state.search.toLowerCase()))
         let posts = this.state.posts.filter(posts => posts.caption.toLowerCase().includes(this.state.search.toLowerCase()))
