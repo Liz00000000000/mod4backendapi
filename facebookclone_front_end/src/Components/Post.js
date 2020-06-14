@@ -11,8 +11,6 @@ export class Post extends Component {
     likesArray = this.props.likes.filter(like => like.post_id === this.props.id )
     likes = this.likesArray.length + ' Likes <3'
     user = this.props.users.find(user => user.id === this.props.user_id )
-    randomMonth = parseInt(Math.random() * (12 - 1) + 1);
-    randomYear = parseInt(Math.random() * (2016 - 1980) + 1980)
 
 
     handleOnChange = event => this.setState({ [event.target.name]: event.target.value })
@@ -25,7 +23,7 @@ export class Post extends Component {
                 <div className='user-container'>
                     <img src={this.user.picture} alt={this.user.first_name}/>
                     <span className='post-user-name'>{this.user.first_name} {this.user.last_name}</span>
-                    <span className='post-date'> {this.randomMonth}/ {this.randomYear}</span>
+                    <span className='post-date'> {this.props.date}</span>
                 </div>
                 <p>{this.props.caption}</p>
                 <div className='post-interaction-container'>
